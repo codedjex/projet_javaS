@@ -1,118 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Onglets</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="tabs">
-      <div
-        role="tablist"
-        aria-label="tabs component"
-        class="tabs-btn-container"
-      >
-        <button
-          role="tab"
-          aria-controls="panel-1"
-          id="tab-1"
-          type="button"
-          aria-selected="true"
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <title>Document</title>
+</head>
+<body>
+    <section id="Home">
+      <header>
+        <div class="navBar">
+            <img src="/Bleu Hôtel et Hébergements Logo.png" alt="photo femme curling">
+            <ul id="menu" class="menu">
+              <a href="#Home" class="Home"><li>Home</li></a>
+              <a href="#News"class="News"><li>News</li></a>
+              <a href="#championship" class="champ"><li>Championship</li></a>
+              <a href="#Teams" class="Teams"><li>Teams</li></a> 
+            </ul>
+            <div class="containerMenuBurger">
+              <div class="menuBurger"></div>
+              <div class="menuBurger"></div>
+              <div class="menuBurger"></div>
+            </div>
+        </div>
+        <div class="containerHeader">
+          <div class="title">
+            <h1>Curl-link</h1>
+            <p>"if you have no friends, practice curling"</p>
+          </div>
+          <div class="presentation">
+            <h2 class="surligne">"the best website</h2>
+              <h2 class="surligne">for</h2> 
+              <h2 class="surligne"> Curling News"</h2>
+          </div>
+        </div>
+        <a href="#News">
+        <div class="bandeau">
+          <p>Jamaica joins World Curling Federation / Meet World Curling Federation President and Director candidates
+          / Gangneung, Korea to host World Mixed Doubles and Seniors 2023</p>
+        </div>
+        </a>
+      </header>
+    </section>
+
+    <section id="News">
+      <h1>News</h1>
+      <div class="containerNews">
+        <div class="New">
+          <h3>Jamaica joins World Curling Federation</h3>
+          <h2>World/News</h2>
+          <p>Curling Jamaica has joined the World Curling Federation as the 67th Member Association on a Conditional Membership as part of the Americas zone and will be eligible to compete in the newly created Pan Continental Curling Championships.</p>
+          <a> read more:</a>
+          </div>
+        <div class="New">
+          <h3>Meet World Curling Federation President and Director candidates</h3>
+          <h2>World/News</h2>
+          <p>During its Annual General Assembly 2022, the World Curling Federation Member Associations will elect a new President and multiple new Directors to the Board.
+            The World Curling Federation received four nominations for President and three nominations for the Director positions.
+            </p>
+            <a> read more:</a>
+        </div>
+        <div class="New">
+          <h3>Gangneung, Korea to host World Mixed Doubles and Seniors 2023</h3>
+          <h2>World/News</h2>
+          <p>The World Mixed Doubles and World Senior Curling Championships 2023 will take place from 22–29 April at the Gangneung Curling and Hockey Centre in Korea.
+
+            These championships will be played in the Olympic venues from the PyeongChang 2018 Olympic Winter Games</p>
+            <a href="" class="read"> read more:</a>
+          </div>
+      </div>
+    </section>
+
+    <section id="championship">
+      <h1>Championship</h1>
+      <div class="tabs">
+        <div
+          role="tablist"
+          aria-label="tabs component"
+          class="tabs-btn-container"
+        >
+          <button
+            role="tab"
+            aria-controls="panel-1"
+            id="tab-1"
+            type="button"
+            aria-selected="true"
+            tabindex="0"
+            class="tab active-tab"
+          >
+          <p>Men's <span>championship</span></p>
+          </button>
+          <button
+            role="tab"
+            aria-controls="panel-2"
+            id="tab-2"
+            type="button"
+            aria-selected="false"
+            tabindex="-1"
+            class="tab"
+          >
+          <p>Women's <span>championship</span></p>
+          </button>
+          <button
+            role="tab"
+            aria-controls="panel-3"
+            id="tab-3"
+            type="button"
+            aria-selected="false"
+            tabindex="-1"
+            class="tab"
+          ><p>
+          Mixed <span>championship</span></p>
+          </button>
+        </div>
+        <div
+          id="panel-1"
+          role="tabpanel"
           tabindex="0"
-          class="tab active-tab"
+          aria-labelledby="tab-1"
+          class="tab-content active-tab-content"
         >
-          Rocket 🚀
-        </button>
-        <button
-          role="tab"
-          aria-controls="panel-2"
-          id="tab-2"
-          type="button"
-          aria-selected="false"
-          tabindex="-1"
-          class="tab"
+          <h3>Men's championship</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+            voluptates laudantium nihil perspiciatis qui voluptatum explicabo,
+            nemo dignissimos id harum enim earum minus est vel, ad iure ab
+            provident quae temporibus voluptatem quibusdam fuga vero commodi! At
+            culpa quidem quam libero atque. Maiores esse ut earum rerum ad, alias
+            dolorum!
+          </p>
+        </div>
+  
+        <div
+          id="panel-2"
+          role="tabpanel"
+          tabindex="0"
+          aria-labelledby="tab-2"
+          class="tab-content"
         >
-          Science 🧪
-        </button>
-        <button
-          role="tab"
-          aria-controls="panel-3"
-          id="tab-3"
-          type="button"
-          aria-selected="false"
-          tabindex="-1"
-          class="tab"
+          <h3>Women's championship</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus nemo eveniet alias quo, dolor quisquam ut a eligendi
+            vero, consequatur, quis cum. Saepe esse debitis ducimus? Quod fugiat
+            obcaecati veritatis amet voluptatum doloribus neque commodi qui quasi
+            illo eum placeat odio ipsam, at, tempore accusamus dicta deleniti
+            explicabo! Quisquam ullam minima iure! Assumenda adipisci consequuntur
+            soluta provident alias fuga quidem ad aperiam magnam nesciunt
+            quibusdam, et qui. Omnis dignissimos pariatur consequatur eos aut,
+            iste voluptatum!
+          </p>
+        </div>
+  
+        <div
+          id="panel-3"
+          role="tabpanel"
+          tabindex="0"
+          aria-labelledby="tab-3"
+          class="tab-content"
         >
-          Food 🍉
-        </button>
+          <h3>Mixed championship</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
+            facere ducimus quas harum provident assumenda atque delectus odio.
+            Blanditiis totam optio vitae placeat alias. Fugiat magnam cupiditate
+            ab ipsum qui sapiente pariatur doloribus reiciendis adipisci enim
+            aliquam vero reprehenderit a quibusdam quas, dolores, debitis cumque
+            dolor ut atque voluptatem nobis voluptatibus velit accusamus! A ea
+            laudantium maxime eaque consequuntur veritatis!
+          </p>
+        </div>
       </div>
-      <div
-        id="panel-1"
-        role="tabpanel"
-        tabindex="0"
-        aria-labelledby="tab-1"
-        class="tab-content active-tab-content"
-      >
-        <h3>Rocket 🚀</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-          voluptates laudantium nihil perspiciatis qui voluptatum explicabo,
-          nemo dignissimos id harum enim earum minus est vel, ad iure ab
-          provident quae temporibus voluptatem quibusdam fuga vero commodi! At
-          culpa quidem quam libero atque. Maiores esse ut earum rerum ad, alias
-          dolorum!
-        </p>
-      </div>
+    </section>
 
-      <div
-        id="panel-2"
-        role="tabpanel"
-        tabindex="0"
-        aria-labelledby="tab-2"
-        class="tab-content"
-      >
-        <h3>Science. 🧪</h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus nemo eveniet alias quo, dolor quisquam ut a eligendi
-          vero, consequatur, quis cum. Saepe esse debitis ducimus? Quod fugiat
-          obcaecati veritatis amet voluptatum doloribus neque commodi qui quasi
-          illo eum placeat odio ipsam, at, tempore accusamus dicta deleniti
-          explicabo! Quisquam ullam minima iure! Assumenda adipisci consequuntur
-          soluta provident alias fuga quidem ad aperiam magnam nesciunt
-          quibusdam, et qui. Omnis dignissimos pariatur consequatur eos aut,
-          iste voluptatum!
-        </p>
+    <section id="Teams">
+      <h1>Teams</h1>
+      <article>
+        <div class="drapeau" onclick="toggle()"></div>
+        <div class="drapeau"onclick="toggle()"></div>
+        <div class="drapeau"onclick="toggle()"></div>
+        <div class="drapeau"onclick="toggle()"></div>
+        <div class="drapeau"onclick="toggle()"></div>
+        <div class="drapeau"onclick="toggle()"></div>
+        <div class="drapeau"onclick="toggle()"></div>
+        <div class="drapeau"onclick="toggle()"></div>
+      </article>
+      <div class="Modal" onclick="toggleStop()">
+        <div class="info">
+          <div class="equipeH equipe">Composition equipe Homme</div>
+          <div class="equipeF equipe">Composition equipe Femme</div>
+          <div class="equipeM equipe">Composition equipe Mixte</div>
+        </div>
       </div>
+    </section>
 
-      <div
-        id="panel-3"
-        role="tabpanel"
-        tabindex="0"
-        aria-labelledby="tab-3"
-        class="tab-content"
-      >
-        <h3>Food. 🍉</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
-          facere ducimus quas harum provident assumenda atque delectus odio.
-          Blanditiis totam optio vitae placeat alias. Fugiat magnam cupiditate
-          ab ipsum qui sapiente pariatur doloribus reiciendis adipisci enim
-          aliquam vero reprehenderit a quibusdam quas, dolores, debitis cumque
-          dolor ut atque voluptatem nobis voluptatibus velit accusamus! A ea
-          laudantium maxime eaque consequuntur veritatis!
-        </p>
-      </div>
-    </div>
+      
 
-    <script src="script.js"></script>
-  </body>
+  <script src="/js/main.js"></script>
+</body>
 </html>
