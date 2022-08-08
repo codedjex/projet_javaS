@@ -1,0 +1,411 @@
+@import'ressource.css';
+header{
+    background: url(/photo_header.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    width: 100vw;
+    height: 100vh;
+
+    color: white;
+
+}
+
+.navBar{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.342);
+
+    box-shadow: 0 0 6px black;
+
+    overflow: hidden;
+}
+.navBar img{
+
+    width: 60px;
+
+}
+#menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    width: auto;
+
+    font-family: 'Antonio';
+
+}
+#menu li{
+    padding: 3vh 2vw 0 2vw;
+    height: 10vh;
+
+    cursor: pointer;
+
+    text-transform:uppercase;
+}
+.active,li:hover{
+    transition: all 0.5s;
+    background-color: red;
+}
+.color{
+    color: black;
+}
+.containerMenuBurger{
+   display: none;
+}
+.containerHeader{
+ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-top: 20vh;
+}
+.title h1{
+    font-family: 'LeagueSpartan';
+    font-size: 80px;
+}
+.title p{
+    font-family: 'Antonio';
+}
+
+.presentation h2{
+    font-family: 'Quicksand';
+    font-weight: 600;
+    font-size: 40px;
+
+    margin: 10px;
+}
+.surligne{
+    background-color: red;
+}
+.bandeau{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.548);
+    width: 50vw;
+    height: 6vh;
+
+    font-size: 30px;
+    font-family: 'Antonio';
+
+    overflow: hidden;
+
+    margin-top: 40vh;
+
+    display: flex;
+    flex-direction: row;
+
+    cursor: pointer;
+}
+.bandeau p{
+    position: absolute;
+
+    width: 200vw;
+
+    animation: defilement 30s linear infinite;
+}
+@keyframes defilement{
+    0%{
+     transform:translateX(50vw);
+    }
+    100%
+    {
+        transform: translateX(-153vw);
+    }
+}
+section {
+  min-width: 100vw;
+  min-height: 100vh;
+
+}
+
+section:nth-child(even) {
+  background-color: teal;
+  color: white;
+}
+#News{
+    background: url(/photo_fond_News.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;   
+}
+.containerNews{
+    width: 100vw;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap-reverse;
+    align-items: center;
+    justify-content: space-around;
+
+    margin-top:10vh;
+
+
+}
+.New{
+    border: 1px solid;
+max-width: 33vw;
+min-width: 335px;
+
+    height: 30vh;
+
+    border-radius: 20px;
+
+    padding: 10px;
+
+    background-color: rgba(255, 255, 255, 0.473);
+
+    transition: box-shadow 0.5s ease-out;
+
+}
+.New h3{
+    text-align: center;
+    font-family: 'Antonio';
+
+    border-bottom: 1px solid ;
+}
+.New h2{
+    color: blue;
+    font-family: 'Quicksand';
+    margin-bottom: 5px;
+}
+.New p {
+    margin-bottom: 10px;
+}
+.New:hover{
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+#championship{
+    background: url(/photo_fond_championship.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#championship button{
+    color: rgb(0, 0, 0);
+    font-family:'LeagueSpartan';
+}
+.tabs {
+    background-color: #ffffffb9;
+    max-width: 800px;
+    margin: 100px auto 0;
+    border-radius: 5px;
+    border: 1px solid #0000003e;
+    color: #b7b2b2;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+  }
+  .tabs-btn-container {
+    display: flex;
+    border-bottom: 1px solid #0000003e;
+  }
+  .tab {
+    border: none;
+    background: transparent;
+    color: #b4b2b2;
+    font-family: Open sans, sans-serif;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 700;
+    padding: 30px 0;
+    cursor: pointer;
+  }
+  .tab:not(:nth-child(3), .tab.active-tab) {
+    border-right: 1px solid #ffffff3e;
+  }
+  .tab:nth-child(1) {
+    border-top-left-radius: 5px;
+  }
+  .tab:nth-child(3) {
+    border-top-right-radius: 5px;
+  }
+  .tab-content {
+    grid-area: 2 / 1 / 3 / 2;
+    padding: clamp(35px, 3vw, 40px);
+    min-height: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-out;
+  }
+  .tab-content p {
+    color: black;
+    font-family: 'Quicksand';
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+  .tab-content h3 {
+    color: black;
+    font-family: 'Antonio';
+    font-size: clamp(20px, 2vw, 25px);
+  }
+  
+  /* Animations */
+  .active-tab {
+    background-color: red;
+    font-weight: bolder;
+    color: #fff
+  }
+  .active-tab-content {
+    visibility: visible;
+    opacity: 1;
+  }
+#Teams h1, #championship h1, #News h1{
+    text-align: center;
+
+    font-family: 'LeagueSpartan';
+    font-size: 70px;
+    color: white;
+}
+#Teams{
+    background: url(/fond_Teams.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+#Teams h1{
+    color: black;
+}
+article{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.drapeau{
+width: 200px;
+height: 200px;
+
+margin: 30px;
+
+border: 2px solid rgb(19, 16, 231);
+
+transition: transform 0.25s;
+
+box-shadow: 0 0 6px rgba(0, 0, 0, 0.808);
+}
+.drapeau:hover{
+    transform: scale(1.1);
+}
+.Modal{
+    position: absolute;
+    top: 300vh;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(128, 128, 128, 0.681);
+
+    visibility: hidden;
+    transition: visibility 0.25s;
+
+    cursor: pointer;
+}
+.croix{
+    background-color: red;
+
+    font-size: 30px;
+    font-family:'LeagueSpartan';
+
+    padding: 10px;
+
+    cursor: pointer;
+
+
+}
+.info{
+    width: 40vw;
+    height: 50vh;
+
+    position: absolute;
+    top: 30vh;
+    left: 30vw;
+
+    border: 2px solid;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: rgba(255, 255, 255, 0.555);
+}
+.equipe{
+    width: calc(100%/3);
+    height: 100%;
+
+    border-right: 1px solid;
+
+    font-family: 'Quicksand';
+
+    text-align: center;
+
+}
+.modalAdd{
+    transition: visibility 0.2s;
+    visibility: visible;
+}
+@media screen and (max-width: 728px){
+    .bandeau{
+        margin-top: 20vh;
+    }
+}
+@media screen and (max-width: 526px){
+    #championship h1{
+        font-size: 45px;
+    }
+}
+@media screen and (max-width: 365px){
+    .title h1{
+    font-size: 60px;
+    }
+    #menu{
+    display: none;
+    }
+    .containerMenuBurger{
+        width: 40px;
+        height: 40px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        margin-right: 20px;
+    }
+    .menuBurger{
+    width: 100%;
+    height: 5px;
+
+    background-color: white;
+
+    border-radius: 10px;
+    }
+    .bandeau{
+        width: 100vw;
+
+        margin-top: 20vh;
+    }   
+    #championship h1{
+        font-size: 35px;
+    }   
+    button span{
+        display: none;
+    }     
+}
+    
