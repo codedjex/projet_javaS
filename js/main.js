@@ -162,9 +162,9 @@ function chargementIndex(){
             contenuDrapeaux= contenuDrapeaux+'<div class="drapeau" onclick="toggle()"><img src="./img/'+element+'" alt="photo drapeau"></div>'
         });
 
-        let conteneurDrapeau = document.getElementById("listeEquipe");
+        const conteneurDrapeau = document.querySelector('#Bdrapeau');
 
-        conteneurDrapeau.appendChild(contenuDrapeaux);
+        conteneurDrapeau.insertAdjacentHTML("afterend",contenuDrapeaux);
 
     }
 
