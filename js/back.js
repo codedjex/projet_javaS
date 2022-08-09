@@ -63,6 +63,20 @@ function ajoutTournoi() {
     localStorage.setItem(index, strTournoi);
 
 }
+function ajoutNew(form) {
+
+    let Titre = form.Titre.value;
+    let categorie = form.categorie.value;
+    let descriptif = form.descriptif.value;
+
+
+    let index = "Actualité-" + Titre;
+    let New1 = new News(Titre, categorie, descriptif);
+    let strNew = JSON.stringify(New1);
+
+    localStorage.setItem(index, strNew);
+
+}
 
 
 
@@ -191,7 +205,35 @@ function chargementTableau(typeContenu) {
 
 
 
-            }
+            }else if (typeContenu == 'News') {
+
+                let index = localStorage.key(i);
+                let checkNew = index.indexOf("Actualité-");
+
+                if (checkNew != -1) {
+
+                    let strNew = localStorage.getItem(index);
+                    let New = JSON.parse(strNew);
+
+                    const tbodyRef = document.getElementById('maTable').getElementsByTagName('tbody')[0];
+
+                    let tbodyRowCount = tbodyRef.rows.length;
+
+                    var row = tbodyRef.insertRow(tbodyRowCount);
+                    let indexNew = 'Actualité-' + New.Titre;
+                    row.id = indexNew;
+                    row.className = "align-middle text-center"
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
+                    var cell4 = row.insertCell(3);
+
+                    cell1.innerHTML = New.Titre;
+                    cell2.innerHTML =New.categorie;
+                    cell3.innerHTML = New.descriptif;
+                    cell4.innerHTML = '<input type="button" value="Supprimer" onclick="supprimer(event)" >';
+                }
+            }   
         }
 
     }

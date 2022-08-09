@@ -67,3 +67,20 @@ class Tournoi{
     }
 
 }
+class News{
+
+    constructor(Titre, categorie, descriptif) {
+
+        this.Titre = Titre;
+        this.categorie = categorie;
+        this.descriptif = descriptif;
+
+    }
+
+    infosNews() {
+
+        return 'Titre: ${this.Titre} | categorie: ${this.categorie} | descriptif: ${this.descriptif}.'
+
+    }
+
+}
