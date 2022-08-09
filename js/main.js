@@ -168,7 +168,7 @@ function chargementIndex(){
 
         const conteneurDrapeau = document.querySelector('#Bdrapeau');
 
-        conteneurDrapeau.insertAdjacentHTML("beforerend",contenuDrapeaux);
+        conteneurDrapeau.insertAdjacentHTML("beforeend",contenuDrapeaux);
 
     }
 
