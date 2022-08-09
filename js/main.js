@@ -133,3 +133,43 @@ function menuBurger() {
 }
 
 
+
+function chargementIndex(){
+
+    if (localStorage.length > 0) {
+
+        let listeImages = [];
+
+        for( let i = 0; i < localStorage.length; i++){
+
+            let index = localStorage.key(i);
+            let checkEquipe = index.indexOf("equipe-");
+
+            if (checkEquipe != -1) {
+
+                let strEquipe = localStorage.getItem(index);
+                let equipe = JSON.parse(strEquipe);
+                
+                let cheminImg= equipe.drapeau;
+                let tblImg = cheminImg.split("\\");
+                let nomImg = tblImg[2];
+
+                listeImages.push(nomImg);
+
+            }
+
+        }
+
+        let contenuDrapeaux = "";
+
+        listeImages.forEach((element) => {
+            contenuDrapeaux= contenuDrapeaux+'<div class="drapeau" onclick="toggle()"><img src="./img/'+element+'" alt="photo drapeau"></div>'
+        });
+
+        const conteneurDrapeau = document.querySelector('#Bdrapeau');
+
+        conteneurDrapeau.insertAdjacentHTML("afterend",contenuDrapeaux);
+
+    }
+
+}
