@@ -54,8 +54,6 @@ function ajoutTournoi() {
         resultat.push(option.value);
     }
 
-    alert(resultat);
-
     let index = "tournoi-" + nom;
     let tournoi1 = new Tournoi(nom, description, lieu, dte_deb, dte_fin, resultat);
     let strTournoi = JSON.stringify(tournoi1);
