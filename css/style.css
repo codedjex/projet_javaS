@@ -1,6 +1,6 @@
 @import'ressource.css';
 header{
-    background: url(/photo_header.jpg);
+    background: url(./../img/photo_header.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -134,7 +134,7 @@ section:nth-child(even) {
   color: white;
 }
 #News{
-    background: url(/photo_fond_News.jpg);
+    background: url(./../img/photo_fond_News.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;   
@@ -187,7 +187,7 @@ min-width: 335px;
     box-shadow: 0 0 20px rgb(0, 0, 0);
 }
 #championship{
-    background: url(/photo_fond_championship.jpeg);
+    background: url(./../img/photo_fond_championship.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -271,7 +271,7 @@ min-width: 335px;
     color: white;
 }
 #Teams{
-    background: url(/fond_Teams.png);
+    background: url(./../img/fond_Teams.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
