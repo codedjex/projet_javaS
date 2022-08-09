@@ -121,10 +121,51 @@ function arrowNavigation(e){
 const flag = document.querySelector('.drapeau');
 const modal = document.querySelector('.Modal');
 
-function toggle() {
+function toggle(event) {
+
+    let index = event.target.id;
+    let strEquipe = localStorage.getItem(index);
+    let equipe = JSON.parse(strEquipe);
+    let cheminImg= equipe.drapeau;
+    let tblImg = cheminImg.split("\\");
+    let nomImg = tblImg[2];
+
+    contenu = '<form id="form-modal" class="form-ajout" name="formulaire">'+
+                '<div class="formulaire-deux-champs-inline">'+
+                    '<div class="formulaire-contact-champ">'+
+                        '<label class="form-label">Nom : </label>'+
+                        '<label class="form-label">'+equipe.intitule+'</label>'+
+                    '</div>'+
+                '</div>'+
+                '<div class="formulaire-deux-champs-inline">'+
+                    '<div class="formulaire-contact-champ">'+
+                        '<label class="form-label">Joueur n°1 : </label>'+
+                        '<label class="form-label">'+equipe.joueur1+'</label>'+
+                    '</div>'+
+                '</div>'+
+                '<div class="formulaire-deux-champs-inline">'+
+                    '<div class="formulaire-contact-champ">'+
+                        '<label class="form-label">Joueur n°2 : </label>'+
+                        '<label class="form-label">'+equipe.joueur2+'</label>'+
+                    '</div>'+
+                '</div>'+
+                '<div class="formulaire-deux-champs-inline">'+
+                    '<div class="formulaire-contact-champ">'+
+                        '<label class="form-label">Joueur n°3 : </label>'+
+                        '<label class="form-label">'+equipe.joueur3+'</label>'+
+                    '</div>'+
+                '</div>'+
+            '</form>'
+
+    let deleteform = document.getElementById("form-modal");
+    if (deleteform != null){deleteform.remove();}
+    document.getElementById('add_here').insertAdjacentHTML("afterend", contenu);
+
+
+
     modal.classList.toggle('modalAdd');
 }
-function toggleStop() {
+function toggleStop(e) {
     modal.classList.toggle('modalAdd');
 }
 
@@ -134,7 +175,8 @@ function chargementIndex(){
 
     if (localStorage.length > 0) {
 
-        let listeImages = [];
+        let contenuDrapeaux = "";
+        const conteneurDrapeau = document.querySelector('#Bdrapeau');
 
         for( let i = 0; i < localStorage.length; i++){
 
@@ -150,22 +192,26 @@ function chargementIndex(){
                 let tblImg = cheminImg.split("\\");
                 let nomImg = tblImg[2];
 
-                listeImages.push(nomImg);
+                contenuDrapeaux= '<div class="drapeau" onclick="toggle(event)"><img class="imgDrapeau" id="'+index+'" src="./img/'+nomImg+'" alt="photo drapeau"></div>'
+                conteneurDrapeau.insertAdjacentHTML("beforeend",contenuDrapeaux);
 
             }
 
         }
 
-        let contenuDrapeaux = "";
-
-        listeImages.forEach((element) => {
-            contenuDrapeaux= contenuDrapeaux+'<div class="drapeau" onclick="toggle()"><img src="./img/'+element+'" alt="photo drapeau"></div>'
-        });
-
-        const conteneurDrapeau = document.querySelector('#Bdrapeau');
-
-        conteneurDrapeau.insertAdjacentHTML("afterend",contenuDrapeaux);
-
     }
 
 }
+
+const tabsDrapeau = [...document.querySelectorAll('.imgDrapeau')]
+
+tabsDrapeau.forEach(tab => tab.addEventListener("click", affichageModalEquipe(e)))
+
+function affichageModalEquipe(e){
+
+    index = e.target.id;
+
+    alert(index);
+
+
+  }

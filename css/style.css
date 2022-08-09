@@ -292,16 +292,14 @@ article{
     justify-content: space-around;
 }
 .drapeau{
-width: 200px;
-height: 200px;
-
+height: auto;
 margin: 30px;
-
-border: 2px solid rgb(19, 16, 231);
-
 transition: transform 0.25s;
-
-box-shadow: 0 0 6px rgba(0, 0, 0, 0.808);
+filter:drop-shadow(0 0 6px rgba(0, 0, 0, 0.808));
+}
+.drapeau img{
+    max-width: 240px;
+    height: 150px;
 }
 .drapeau:hover{
     transform: scale(1.1);
@@ -322,15 +320,10 @@ box-shadow: 0 0 6px rgba(0, 0, 0, 0.808);
 }
 .croix{
     background-color: red;
-
     font-size: 30px;
     font-family:'LeagueSpartan';
-
     padding: 10px;
-
     cursor: pointer;
-
-
 }
 .info{
     width: 40vw;
@@ -353,18 +346,35 @@ box-shadow: 0 0 6px rgba(0, 0, 0, 0.808);
 .equipe{
     width: calc(100%/3);
     height: 100%;
-
     border-right: 1px solid;
-
     font-family: 'Quicksand';
-
     text-align: center;
-
 }
 .modalAdd{
     transition: visibility 0.2s;
     visibility: visible;
 }
+
+
+.formulaire-deux-champs-inline .formulaire-contact-champ {
+    display: inline-block;
+    width: 50%;
+}
+
+.formulaire-deux-champs-inline .formulaire-contact-champ:not(:last-child) {
+    padding: 0 15px 0 0;
+}
+
+.formulaire-contact-champ {
+    margin: 0 0 30px;
+}
+
+.formulaire-contact-champ label {
+    font-size: 15px;
+}
+
+
+
 @media screen and (max-width: 728px){
     .bandeau{
         margin-top: 20vh;
