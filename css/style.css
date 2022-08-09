@@ -16,6 +16,7 @@ header{
     position: fixed;
     top: 0;
     width: 100vw;
+    height: 10vh;
 
     display: flex;
     flex-direction: row;
@@ -65,15 +66,19 @@ header{
  
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: space-around;
     align-items: center;
 
     padding-top: 10vh;
 }
+.menulateral{
+    display: none;
+}
+
 .title h1{
     font-family: 'LeagueSpartan';
-    font-size: 80px;
+    font-size: 100px;
 }
 .title p{
     font-family: 'Antonio';
@@ -365,46 +370,101 @@ box-shadow: 0 0 6px rgba(0, 0, 0, 0.808);
     transition: visibility 0.2s;
     visibility: visible;
 }
-@media screen and (max-width: 728px){
-    .bandeau{
-        margin-top: 20vh;
+@media screen and (max-width: 756px){
+    .presentation{
+        margin-top: 10vh;
+        }
+@media screen and (max-width: 669px){
+    #menu{
+        display: none;
+        }
+        .containerMenuBurger{
+            width: 40px;
+            height: 40px;
+    
+            display: flex;
+            flex-direction:column-reverse;
+            align-items: center;
+            justify-content: space-around;
+    
+            margin-right: 20px;
+        }
+        .menuBurger{
+        width: 100%;
+        height: 5px;
+    
+        background-color: white;
+    
+        border-radius: 10px;
+        }
+        .menulateral{
+        position: fixed;
+        top: 10vh;
+        right: 0%;
+
+        height: 90vh;
+        width: 20vw;
+
+        background-color: rgba(0, 0, 0, 0.308);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        padding: 10px;
+
+        transform: translateX(20vw);
+        transition: transform 0.5s ease-out;
+        }
+        .fa-solid{
+            font-size: 40px;
+        }
+        .fa-medal{
+            padding-left: 30px;
+        }
+        .fa-solid:hover{
+            transform: scale(1.1);
+        }
+        .translate{
+            transform: translateX(0vw);
+        }
+    .presentation{
+        margin-top: 5vh;
+    }
+    .containerNews{
+        margin-top: 2vh;
     }
 }
 @media screen and (max-width: 526px){
+    .title h1{
+        font-size: 80px;
+    }
+    .presentation h2{
+        font-size: 30px;
+    }
     #championship h1{
         font-size: 45px;
+    }
+    .tabs{
+        margin: 20px 0;
+    }
+    .tab-content {
+        padding: 10px 5px;
+    }
+    li{
+        display: none;
+    }
+    .fa-medal{
+    padding-left: 0;
     }
 }
 @media screen and (max-width: 365px){
     .title h1{
     font-size: 60px;
     }
-    #menu{
-    display: none;
-    }
-    .containerMenuBurger{
-        width: 40px;
-        height: 40px;
-
-        display: flex;
-        flex-direction:column-reverse;
-        align-items: center;
-        justify-content: space-around;
-
-        margin-right: 20px;
-    }
-    .menuBurger{
-    width: 100%;
-    height: 5px;
-
-    background-color: white;
-
-    border-radius: 10px;
-    }
     .bandeau{
         width: 100vw;
-
-        margin-top: 20vh;
     }   
     #championship h1{
         font-size: 35px;

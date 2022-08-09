@@ -127,5 +127,9 @@ function toggle() {
 function toggleStop() {
     modal.classList.toggle('modalAdd');
 }
+const menuLateral = document.getElementById('menulateral');
+function menuBurger() {
+    menuLateral.classList.toggle('translate');
+}
 
 
