@@ -1,8 +1,8 @@
 @import'ressource.css';
 header{
-    background: url(./../img/photo_header.jpg);
+    background: url(/img/photo_header.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 20% 80%;
     background-size: cover;
 
     width: 100vw;
@@ -69,7 +69,7 @@ header{
     justify-content: space-around;
     align-items: center;
 
-    padding-top: 20vh;
+    padding-top: 10vh;
 }
 .title h1{
     font-family: 'LeagueSpartan';
@@ -78,13 +78,18 @@ header{
 .title p{
     font-family: 'Antonio';
 }
-
+.presentation{
+    margin-top: 30vh;
+}
 .presentation h2{
     font-family: 'Quicksand';
     font-weight: 600;
     font-size: 40px;
 
     margin: 10px;
+}
+.exp{
+    width: auto;
 }
 .surligne{
     background-color: red;
@@ -100,7 +105,7 @@ header{
 
     overflow: hidden;
 
-    margin-top: 40vh;
+    margin-top: 20vh;
 
     display: flex;
     flex-direction: row;
@@ -134,7 +139,7 @@ section:nth-child(even) {
   color: white;
 }
 #News{
-    background: url(./../img/photo_fond_News.jpg);
+    background: url(/img/photo_fond_News.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;   
@@ -187,7 +192,7 @@ min-width: 335px;
     box-shadow: 0 0 20px rgb(0, 0, 0);
 }
 #championship{
-    background: url(./../img/photo_fond_championship.jpeg);
+    background: url(/img/photo_fond_championship.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -271,7 +276,7 @@ min-width: 335px;
     color: white;
 }
 #Teams{
-    background: url(./../img/fond_Teams.png);
+    background: url(/img/fond_Teams.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
@@ -382,7 +387,7 @@ box-shadow: 0 0 6px rgba(0, 0, 0, 0.808);
         height: 40px;
 
         display: flex;
-        flex-direction: column;
+        flex-direction:column-reverse;
         align-items: center;
         justify-content: space-around;
 

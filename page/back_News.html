@@ -23,7 +23,7 @@
         </style>
     </head>
 
-    <body onload="chargementTableau('equipes')">
+    <body onload="chargementTableau('News')">
 
         <header>
             <!-- Fixed navbar -->
@@ -62,7 +62,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Détails de l'équipe</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Détails des news</h5>
                         </div>
                         <div class="modal-body" id="affichage_modal">
                             <p id ="add_here"></p>
@@ -76,33 +76,27 @@
 
             <div class="container pt-5">
 
-                <h1 class="mt-5">Ajout équipe</h1>
+                <h1 class="mt-5">Ajout News</h1>
                 
                 <form class="form-ajout" name="formulaire">
 
                     <div class="row mt-4 mb-3">
                         <div class="col">
-                            <label for='intitule' class="form-label">Intitulé</label>
-                            <input class="form-control" type='text' name='intitule' id='intitule' required>
-                        </div>
-                        <div class="col">
-                            <label for='drapeau' class="form-label">Drapeau</label>
-                            <input class="form-control" type='file' name='drapeau' id='drapeau' required>
+                            <label for='titre' class="form-label">Titre</label>
+                            <input class="form-control" type='text' name='Titre' id='Titre' required>
                         </div>
                     </div>
                     <div class="row mt-4 mb-3">
                         <div class="col">
-                            <label for='j1' class="form-label">Joueur n°1</label>
-                            <input class="form-control" type='text' name='j1' id='j1' required>
-                            <label for='j2' class="form-label">Joueur n°2</label>
-                            <input class="form-control" type='text' name='j2' id='j2' required>
-                            <label for='j3' class="form-label">Joueur n°3</label>
-                            <input class="form-control" type='text' name='j3' id='j3' required>
+                            <label for='categorie' class="form-label">Categorie</label>
+                            <input class="form-control" type='text' name='categorie' id='categorie' required>
+                            <label for='descriptif' class="form-label">descriptif</label>
+                            <input class="form-control" type='text' name='descriptif' id='descriptif' required>
                         </div>
                     </div>
                     <div class="row d-flex justify-content-center mt-5 mb-5">
                         <div class="col-2">
-                            <button id='btn-envoi' type="submit" class="btn btn-primary" onclick="ajoutEquipe(this.form)">Ajouter</button>
+                            <button id='btn-envoi' type="submit" class="btn btn-primary" onclick="ajoutNew(this.form)">Ajouter</button>
                         </div>
                     </div>
 
@@ -115,16 +109,14 @@
 
                 <div class="container mb-5 table-responsive">
 
-                    <h3 class="mt-5 mb-4">Liste des équipes</h3>
+                    <h3 class="mt-5 mb-4">News</h3>
 
                     <table id="maTable" class="table table-striped">
                         <thead>
                             <tr>
-                                <th scope="col" class="text-center text-nowrap">Intitulé <img class="fleches" src="./../img/up-and-down-arrows.png" alt="flèches de tri"></th>
-                                <th scope="col" class="text-center text-nowrap">Drapeau</th>
-                                <th scope="col" class="text-center text-nowrap">Joueur 1</th>
-                                <th scope="col" class="text-center text-nowrap">Joueur 2</th>
-                                <th scope="col" class="text-center text-nowrap">Joueur 3</th>
+                                <th scope="col" class="text-center text-nowrap">Titre <img class="fleches" src="./../img/up-and-down-arrows.png" alt="flèches de tri"></th>
+                                <th scope="col" class="text-center text-nowrap">Categorie</th>
+                                <th scope="col" class="text-center text-nowrap">descriptif</th>
                                 <th scope="col" class="text-center text-nowrap">Outils</th>
                             </tr>
                         </thead>
@@ -146,5 +138,3 @@
     </body>
 
 </html>
-
-
