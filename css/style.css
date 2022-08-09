@@ -300,6 +300,7 @@ article{
 
 }
 .drapeau{
+
     width: 15vw;
     height: 20vh;
 
@@ -308,9 +309,10 @@ article{
     transition: transform 0.25s;
     filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.808));
 }
+
 .drapeau img{
-    width: 100%;
-    height: 100%;
+    max-width: 240px;
+    height: 150px;
 }
 .drapeau:hover{
     transform: scale(1.1);
@@ -331,15 +333,10 @@ article{
 }
 .croix{
     background-color: red;
-
     font-size: 30px;
     font-family:'LeagueSpartan';
-
     padding: 10px;
-
     cursor: pointer;
-
-
 }
 .info{
     width: 40vw;
@@ -362,110 +359,49 @@ article{
 .equipe{
     width: calc(100%/3);
     height: 100%;
-
     border-right: 1px solid;
-
     font-family: 'Quicksand';
-
     text-align: center;
-
 }
 .modalAdd{
     transition: visibility 0.2s;
     visibility: visible;
 }
-@media screen and (max-width: 756px){
-    .presentation{
-        margin-top: 10vh;
-        }
-@media screen and (max-width: 669px){
-    #menu{
-        display: none;
-        }
-        .containerMenuBurger{
-            width: 40px;
-            height: 40px;
-    
-            display: flex;
-            flex-direction:column-reverse;
-            align-items: center;
-            justify-content: space-around;
-    
-            margin-right: 20px;
-        }
-        .menuBurger{
-        width: 100%;
-        height: 5px;
-    
-        background-color: white;
-    
-        border-radius: 10px;
-        }
-        .menulateral{
-        position: fixed;
-        top: 10vh;
-        right: 0%;
-
-        height: 90vh;
-        width: 20vw;
-
-        background-color: rgba(0, 0, 0, 0.308);
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-
-        padding: 10px;
-
-        transform: translateX(20vw);
-        transition: transform 0.5s ease-out;
-        }
-        .fa-solid{
-            font-size: 40px;
-        }
-        .fa-medal{
-            padding-left: 30px;
-        }
-        .fa-solid:hover{
-            transform: scale(1.1);
-        }
-        .translate{
-            transform: translateX(0vw);
-        }
-    .presentation{
-        margin-top: 5vh;
-    }
-    .containerNews{
-        margin-top: 2vh;
+@media screen and (max-width: 728px){
+    .bandeau{
+        margin-top: 20vh;
     }
 }
 @media screen and (max-width: 526px){
-    .title h1{
-        font-size: 80px;
-    }
-    .presentation h2{
-        font-size: 30px;
-    }
     #championship h1{
         font-size: 45px;
-    }
-    .tabs{
-        margin: 20px 0;
-    }
-    .tab-content {
-        padding: 10px 5px;
-    }
-    li{
-        display: none;
-    }
-    .fa-medal{
-    padding-left: 0;
     }
 }
 @media screen and (max-width: 365px){
     .title h1{
     font-size: 60px;
+    }
+    #menu{
+    display: none;
+    }
+    .containerMenuBurger{
+        width: 40px;
+        height: 40px;
+
+        display: flex;
+        flex-direction:column-reverse;
+        align-items: center;
+        justify-content: space-around;
+
+        margin-right: 20px;
+    }
+    .menuBurger{
+    width: 100%;
+    height: 5px;
+
+    background-color: white;
+
+    border-radius: 10px;
     }
     .bandeau{
         width: 100vw;
